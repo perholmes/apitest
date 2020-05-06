@@ -13,6 +13,8 @@ phases:
     - mv * ../github.com/perholmes/apitest
     - mv ../github.com .
     - cd github.com/perholmes/apitest
+    - go get github.com/aws/aws-lambda-go/events
+    - go get github.com/aws/aws-lambda-go/lambda
   build:
     commands:
     - make deploy
