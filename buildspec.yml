@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+    - npm install --silent --progress=false -g npm
+    - npm install --silent --progress=false -g serverless
+    - npm install --silent --progress-false
+    - npm --version
+  pre_build:
+    commands:
+    - mkdir -p ../github.com/perholmes/apitest
+    - mv * ../github.com/perholmes/apitest
+    - mv ../github.com .
+    - cd github.com/perholmes/apitest
+  build:
+    commands:
+    - make deploy
+  post_build:
+    commands:
+    - echo Build completed on `date`
