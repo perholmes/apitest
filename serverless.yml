@@ -51,8 +51,8 @@ provider:
 #  environment:
 #    variable1: value1
 
-plugins:
-  - serverless-offline
+#plugins:
+#  - serverless-offline
 
 package:
   exclude:
